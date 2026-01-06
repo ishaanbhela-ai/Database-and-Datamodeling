@@ -1,0 +1,11 @@
+Some real world applications and the database they use:
+
+1) YouTube:
+YouTube uses MySQL database for their website to store metadata. YouTube currently have 2.53 billion active users and had various challenges to incorporate MySQL as their main database. To solve those challenges, YouTube used partitioning and sharding techniques on their MySQL database and made storing and retrieving the data efficient. MySQL is suitable for youtube's use case because YouTube has a lot of relational data, such as users, subscribers, media gener etc.
+
+2) ChatGPT:
+ChatGPT uses a NoSQL database for storing all the users and chats. They use Azure's Cosmo DB which provides a reliable, and scalable NoSQL database service.
+NoSQL is the suitable for chatGPT's usecase because it does not have a proper relational data, it works on semi structured data.
+
+3) Gmail:
+Gmail uses a NoSQL database. Its primary data only include mail, sender and receiver, with no complex relations between each other. Therefore its uses a semi structured database which results in faster and efficient information storing and retrieval.
