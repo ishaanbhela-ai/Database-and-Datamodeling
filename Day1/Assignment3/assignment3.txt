@@ -1,0 +1,27 @@
+Why is normalization important? What problems occur if a database is not normalized?
+Normalization is important to reduce data redundancy and also to prevent any anomaly occurring while performing and retrieval, storing or update operation on database. Normalization also help in keeping the integrity of data.
+If the database is redundant, then each update operation will have to update multiple rows, and our goal is to have the minimum number of rows affected during any operation. This will reduce any confusion and also keep the data properly structured and understandable by the developer.
+There are 3 types of normalizations:
+1NF: Ensures atomic data
+This means that the data should be stored in such a way that it cannot be broken down into further pieces.
+2NF: Ensures there are no partial dependencies. Each column must depend only on the primary key
+3NF: Ensures there are no transitive dependencies. For example, if column A depends on column B and column B depends on column C, then the table is not in 3NF.
+
+
+Order_ID	Customer_name	Products
+101		Rahul		Laptop, Mouse
+
+The above database violates the rule of 1NF because the Products column can be broken down into further pieces.
+To solve this we need to make a new Order_Items table, with order_id as a foreign key in it.
+
+ORDER TABLE
+Order_ID	Customer_name
+101		Rahul
+
+ORDER_ITEMS TABLE
+Order_id	Product_name
+101		Laptop
+101		Mouse
+
+This ensures the data is atomic and also one order can have multiple items.
+
